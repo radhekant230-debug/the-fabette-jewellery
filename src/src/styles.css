@@ -1,7 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=DM+Sans:wght@400;500&display=swap');
+
 body {
   background: #000;
   color: #fff;
   font-family: "Inter", sans-serif;
+}
+
+/* ================= Home hero CTA ("DISCOVER THE COLLECTION") ================= */
+.hero-cta {
+  transition: background-color 0.35s ease, color 0.35s ease;
+}
+.hero-cta:hover,
+.hero-cta:focus-visible {
+  background-color: #18140f;
+  color: #fbf7f1 !important;
+}
+.hero-cta:focus-visible {
+  outline: 2px solid #18140f;
+  outline-offset: 3px;
+}
+@media (max-width: 480px) {
+  .hero-cta {
+    padding: 14px 26px !important;
+    letter-spacing: 0.14em !important;
+    font-size: 11px !important;
+  }
 }
 
 .hero {
