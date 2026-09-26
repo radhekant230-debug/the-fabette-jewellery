@@ -1,260 +1,301 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import "bootstrap/dist/css/bootstrap.min.css";
+{/* ================= PREMIUM WHITE HERO ================= */}
+<motion.section
+  initial={{ opacity: 0 }}
+  animate={{ opacity: 1 }}
+  transition={{ duration: 1.2 }}
+  className="position-relative overflow-hidden"
+  style={{
+    minHeight: "100vh",
+    background: "#ffffff",
+    color: "#111111",
+    display: "flex",
+    alignItems: "center",
+  }}
+>
+  {/* SUBTLE GOLD GLOW */}
+  <div
+    style={{
+      position: "absolute",
+      width: "500px",
+      height: "500px",
+      borderRadius: "50%",
+      background: "rgba(180, 138, 90, 0.08)",
+      filter: "blur(100px)",
+      top: "-180px",
+      right: "-120px",
+      pointerEvents: "none",
+    }}
+  />
 
-const Home = () => {
-  const collections = [
-    {
-      title: "RINGS",
-      image:
-        "https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=800&q=80",
-    },
-    {
-      title: "EARRINGS",
-      image:
-        "https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=800&q=80",
-    },
-    {
-      title: "NECKLACES",
-      image:
-        "https://images.unsplash.com/photo-1617038260897-41a1f14a8ca0?auto=format&fit=crop&w=800&q=80",
-    },
-    {
-      title: "BRACELETS",
-      image:
-        "https://images.unsplash.com/photo-1611652022419-a9419f74343d?auto=format&fit=crop&w=800&q=80",
-    },
-  ];
+  <div className="container position-relative">
+    <div className="row align-items-center min-vh-100">
 
-  const gallery = [
-    "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1511499767150-a48a237f0083?auto=format&fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1617038260897-41a1f14a8ca0?auto=format&fit=crop&w=800&q=80",
-  ];
+      {/* ================= LEFT CONTENT ================= */}
+      <div className="col-lg-6 py-5">
 
-  return (
-    <div className="bg-white">
-      {/* HERO */}
-
-      <section className="bg-black text-white">
-        <div className="container-fluid p-0">
-          <div className="row g-0">
-            <div className="col-lg-6">
-              <img
-                src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=1400&q=80"
-                alt=""
-                className="w-100"
-                style={{
-                  height: "90vh",
-                  objectFit: "cover",
-                }}
-              />
-            </div>
-
-            <div className="col-lg-6 d-flex align-items-center justify-content-center">
-              <div className="text-center">
-                <h1
-                  className="fw-light"
-                  style={{
-                    letterSpacing: "4px",
-                    fontSize: "3rem",
-                    lineHeight: "1.4",
-                  }}
-                >
-                  TIMELESS LUXURY.
-                  <br />
-                  ETERNAL PRESENCE.
-                </h1>
-
-                <Link
-                  to="/collection"
-                  className="btn btn-outline-light rounded-0 mt-4 px-4 py-2"
-                  style={{
-                    letterSpacing: "2px",
-                    fontSize: "12px",
-                  }}
-                >
-                  ENTER COLLECTION
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* COLLECTIONS */}
-
-      <section className="py-5">
-        <div className="container text-center">
-          <h5
-            className="fw-light mb-5"
-            style={{
-              letterSpacing: "4px",
-            }}
-          >
-            COLLECTIONS
-          </h5>
-
-          <div className="row g-4">
-            {collections.map((item, index) => (
-              <div className="col-6 col-md-3" key={index}>
-                <div>
-                  <div
-                    className="bg-light border d-flex align-items-center justify-content-center"
-                    style={{
-                      height: "240px",
-                    }}
-                  >
-                    <img
-                      src={item.image}
-                      alt={item.title}
-                      className="img-fluid"
-                      style={{
-                        maxHeight: "200px",
-                        objectFit: "contain",
-                      }}
-                    />
-                  </div>
-
-                  <p
-                    className="mt-3 mb-0 small"
-                    style={{
-                      letterSpacing: "2px",
-                    }}
-                  >
-                    {item.title}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* FEATURED */}
-
-      <section className="py-5">
-        <div className="container">
-          <div className="row align-items-center">
-            <div className="col-lg-6 text-center mb-4 mb-lg-0">
-              <div className="bg-light p-4">
-                <img
-                  src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=800&q=80"
-                  alt=""
-                  className="img-fluid"
-                  style={{
-                    maxHeight: "350px",
-                  }}
-                />
-              </div>
-            </div>
-
-            <div className="col-lg-6 text-center">
-              <h3
-                className="fw-light"
-                style={{
-                  letterSpacing: "3px",
-                }}
-              >
-                LUMINA RING
-              </h3>
-
-              <p className="my-3">₹ 8,950</p>
-
-              <Link
-                to="/product"
-                className="text-dark text-decoration-none border-bottom pb-1"
-                style={{
-                  letterSpacing: "2px",
-                  fontSize: "12px",
-                }}
-              >
-                VIEW DETAILS
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* QUOTE */}
-
-      <section className="bg-dark text-white text-center py-5">
-        <h4
-          className="fw-light"
+        {/* SMALL LABEL */}
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2, duration: 0.8 }}
           style={{
-            letterSpacing: "3px",
-            lineHeight: "1.8",
+            letterSpacing: "0.45em",
+            fontSize: "12px",
+            color: "#777777",
+            textTransform: "uppercase",
+            marginBottom: "28px",
+            fontWeight: 500,
           }}
         >
-          FABETTE EXISTS WHERE
+          Digital Luxury Maison
+        </motion.p>
+
+        {/* MAIN HEADING */}
+        <motion.h1
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.35, duration: 1 }}
+          style={{
+            fontFamily: "Georgia, 'Times New Roman', serif",
+            fontSize: "clamp(4rem, 8vw, 8rem)",
+            fontWeight: 400,
+            lineHeight: 0.88,
+            letterSpacing: "-0.04em",
+            margin: 0,
+            color: "#111111",
+          }}
+        >
+          TIMELESS
           <br />
-          DESIGN BECOMES EMOTION.
-        </h4>
-      </section>
 
-      {/* GALLERY */}
-
-      <section className="bg-black text-white py-5">
-        <div className="container">
-          <h5
-            className="text-center fw-light mb-5"
+          <span
             style={{
-              letterSpacing: "4px",
+              color: "#A67C2E",
+              fontStyle: "italic",
+              fontWeight: 400,
+              letterSpacing: "-0.05em",
             }}
           >
-            EDITORIAL GALLERY
-          </h5>
+            LUXURY
+          </span>
+        </motion.h1>
 
-          <div className="row g-2">
-            {gallery.map((img, index) => (
-              <div className="col-6 col-md-3" key={index}>
-                <div
-                  style={{
-                    height: "320px",
-                    overflow: "hidden",
-                  }}
-                >
-                  <img
-                    src={img}
-                    alt=""
-                    className="w-100 h-100"
-                    style={{
-                      objectFit: "cover",
-                    }}
-                  />
-                </div>
-              </div>
-            ))}
+        {/* GOLD LINE */}
+        <motion.div
+          initial={{ width: 0 }}
+          animate={{ width: "90px" }}
+          transition={{ delay: 0.8, duration: 0.8 }}
+          style={{
+            height: "1px",
+            background: "#A67C2E",
+            marginTop: "35px",
+            marginBottom: "28px",
+          }}
+        />
+
+        {/* DESCRIPTION */}
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.8, duration: 1 }}
+          style={{
+            maxWidth: "520px",
+            lineHeight: 1.9,
+            fontSize: "17px",
+            color: "#555555",
+            marginBottom: "35px",
+            fontFamily: "Georgia, 'Times New Roman', serif",
+          }}
+        >
+          Fabette blends timeless jewellery craftsmanship with
+          contemporary elegance — creating pieces designed to
+          become part of your story.
+        </motion.p>
+
+        {/* ================= BUTTONS ================= */}
+        <motion.div
+          initial={{ opacity: 0, y: 25 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 1, duration: 0.8 }}
+          className="d-flex gap-3 flex-wrap"
+        >
+
+          {/* PRIMARY BUTTON */}
+          <Link
+            to="/collection"
+            className="btn"
+            style={{
+              background: "#111111",
+              color: "#ffffff",
+              padding: "17px 40px",
+              borderRadius: "0",
+              letterSpacing: "0.2em",
+              fontSize: "11px",
+              fontWeight: 600,
+              textDecoration: "none",
+              transition: "all 0.3s ease",
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.background = "#A67C2E";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.background = "#111111";
+            }}
+          >
+            ENTER COLLECTION
+          </Link>
+
+          {/* SECONDARY BUTTON */}
+          <button
+            type="button"
+            onClick={() => navigate("/about")}
+            className="btn"
+            style={{
+              border: "1px solid #222222",
+              color: "#111111",
+              padding: "17px 40px",
+              borderRadius: "0",
+              letterSpacing: "0.2em",
+              fontSize: "11px",
+              fontWeight: 600,
+              background: "transparent",
+              transition: "all 0.3s ease",
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.background = "#111111";
+              e.currentTarget.style.color = "#ffffff";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.background = "transparent";
+              e.currentTarget.style.color = "#111111";
+            }}
+          >
+            OUR STORY
+          </button>
+
+        </motion.div>
+
+      </div>
+
+      {/* ================= RIGHT IMAGE ================= */}
+      <div className="col-lg-6 position-relative">
+
+        <motion.div
+          initial={{ opacity: 0, scale: 1.08 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{
+            delay: 0.3,
+            duration: 1.4,
+            ease: "easeOut",
+          }}
+          style={{
+            position: "relative",
+            width: "100%",
+            height: "78vh",
+            minHeight: "550px",
+            overflow: "hidden",
+          }}
+        >
+
+          {/* IMAGE */}
+          <img
+            src="https://images.unsplash.com/photo-1617038220319-276d3cfab638?q=80&w=1974&auto=format&fit=crop"
+            alt="Fabette Luxury Jewellery"
+            style={{
+              width: "100%",
+              height: "100%",
+              objectFit: "cover",
+              objectPosition: "center",
+              display: "block",
+              filter: "brightness(1.02) contrast(0.96)",
+              transition: "transform 1s ease",
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.transform = "scale(1.04)";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.transform = "scale(1)";
+            }}
+          />
+
+          {/* IMAGE CAPTION */}
+          <div
+            style={{
+              position: "absolute",
+              bottom: "25px",
+              left: "25px",
+              background: "rgba(255,255,255,0.92)",
+              padding: "12px 18px",
+              backdropFilter: "blur(8px)",
+            }}
+          >
+            <span
+              style={{
+                fontSize: "10px",
+                letterSpacing: "0.25em",
+                color: "#222222",
+                textTransform: "uppercase",
+              }}
+            >
+              The Fabette Collection
+            </span>
           </div>
-        </div>
-      </section>
 
-      {/* FOOTER */}
+        </motion.div>
 
-      <footer className="bg-black text-white border-top border-secondary py-5">
-        <div className="container">
-          <div className="row text-center text-md-start">
-            <div className="col-md-4 mb-3">
-              <h6 style={{ letterSpacing: "3px" }}>FABETTE</h6>
-            </div>
+        {/* DECORATIVE GOLD FRAME */}
+        <div
+          style={{
+            position: "absolute",
+            width: "100%",
+            height: "100%",
+            border: "1px solid rgba(166,124,46,0.35)",
+            top: "18px",
+            left: "18px",
+            pointerEvents: "none",
+            zIndex: -1,
+          }}
+        />
 
-            <div className="col-md-4 mb-3">
-              <p className="small mb-1">COLLECTIONS</p>
-              <p className="small mb-1">ABOUT</p>
-              <p className="small">CONTACT</p>
-            </div>
+      </div>
 
-            <div className="col-md-4 text-md-end">
-              <p className="small mb-0">
-                © 2026 Fabette Luxury Jewellery
-              </p>
-            </div>
-          </div>
-        </div>
-      </footer>
     </div>
-  );
-};
+  </div>
 
-export default Home;
+  {/* ================= SCROLL INDICATOR ================= */}
+  <motion.div
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    transition={{ delay: 1.5 }}
+    style={{
+      position: "absolute",
+      bottom: "25px",
+      left: "50%",
+      transform: "translateX(-50%)",
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "center",
+      gap: "8px",
+    }}
+  >
+    <span
+      style={{
+        fontSize: "9px",
+        letterSpacing: "0.3em",
+        color: "#888888",
+        textTransform: "uppercase",
+      }}
+    >
+      Scroll
+    </span>
+
+    <div
+      style={{
+        width: "1px",
+        height: "40px",
+        background: "#A67C2E",
+      }}
+    />
+  </motion.div>
+
+</motion.section>
